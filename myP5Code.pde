@@ -4,9 +4,9 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var leftX = 45;
-var rightX = 370;
-var sunRadius = 100;
+var leftX = 140;
+var rightX = 270;
+var sunRadius = 70;
 
 
 //🟢Draw Function - Runs on Repeat
@@ -33,6 +33,12 @@ draw = function(){
   ellipse(rightX+62, 100, 70, 60);
   ellipse(rightX-62, 100, 70, 60);
   
+  leftX -= 1;
+  rightX += 1;
+  sunRadius *= 100.5/100;
+
+ if(sunRadius > 100){sunRadius=101};
+ if(leftX < 75){leftX=74}
 }
 
 
